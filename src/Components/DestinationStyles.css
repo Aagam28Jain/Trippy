@@ -1,0 +1,93 @@
+/*destination is the whole div which contains everythig from heading text images*/
+.destination {
+  margin: 4rem 6rem;
+}
+/*targeting text=>Popular Destination*/
+.destination h1 {
+  font-size: 3rem;
+}
+/*it is hte div which contain first images and text*/
+.first-des {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4.5rem;
+}
+/*it is for our second dest. Mt.dagulkul*/
+.first-des-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8.5rem;
+}
+/*div contains text for Taal volcano*/
+.des-text {
+  width: 45%;
+  text-align: center;
+  font-size: 1.1rem;
+}
+/*heading =>taal volcano*/
+.des-text h2 {
+  padding-bottom: 1rem;
+}
+/*it is not the iamge it is the div which contains both images
+remember image is the class name given by us only.*/
+.image {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  z-index: -99;
+}
+/*targetting both images at once*/
+.image img {
+  width: 49%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: -1px 1px 62px -18px rgba(0, 0, 0, 0.19);
+}
+
+/*targetting the second image to move upwards*/
+.first-des .image img:nth-child(2) {
+  position: absolute;
+  top: -10%;
+  right: 0;
+}
+.first-des-reverse .image img:nth-child(2) {
+  position: absolute;
+  top: 10%;
+  right: 0;
+}
+
+@media screen and (max-width: 850px) {
+  .destination {
+    margin: 4rem 2rem;
+  }
+  /*for small screen we want text and images in diff.lines
+  and images first so reversing it.*/
+  .first-des {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 2.5rem;
+  }
+  /*it  is for second dest. MT.dagaulkul*/
+  .first-des-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 4.5rem;
+  }
+  /*now both text image are in diff. line so we can give them full width*/
+  .des-text {
+    width: 100%;
+  }
+  .image {
+    width: 100%;
+    margin: 1.8rem 0;
+  }
+  /*reducing image size*/
+  .image img {
+    height: 250px;
+  }
+}
